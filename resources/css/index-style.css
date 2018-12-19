@@ -12,7 +12,8 @@ header {
   border-bottom: 1px solid #00887a;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: courier;
+  font-family: arial;
+  font-weight: bold;
   color: #00887a;
   z-index: 1;
   position: fixed;
@@ -49,38 +50,52 @@ header {
 /* MAIN BODY */
 
 main {
-  padding-top: 100px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .thumbnails {
-  width: 300px;
-  height: 400px;
-  margin-left: 35px;
-  margin-right: 35px;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.thumbnails img a:hover{
-  color: #00887a
-}
-
-.thumbnails img {
+.images {
   width: 300px;
   height: 300px;
+  margin: 5px;
+  text-decoration: none;
+  padding-bottom: 40px;
 }
 
-.thumbnails p {
-  text-align: left;
-  color: #00887a;
-  font-family: courier;
+.images img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.thumbnails img:hover {
-  opacity: 0.3;
-  transition: .5s ease
+.text-wrapper {
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  opacity: 0;
+
+
+}
+
+.text-wrapper:hover {
+  transition: all 0.8s ease;
+  background: #00887a;
+  opacity: 0.8;
 }
 
 /* FOOTER */
@@ -91,7 +106,7 @@ footer {
   padding-left: 10px;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 
@@ -102,10 +117,11 @@ footer {
 
 .twitter-logo {
   margin-left: auto;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 .twitter-logo img:hover {
   opacity: 0.3;
-  transition: .5s ease
+  transition: .8s ease;
+
 }
